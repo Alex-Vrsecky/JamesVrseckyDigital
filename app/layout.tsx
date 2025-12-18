@@ -20,6 +20,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           crossOrigin="anonymous"
         />
         <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
+        <title>JVD</title>
       </head>
       <body className="bg-white">
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>

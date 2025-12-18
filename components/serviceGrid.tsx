@@ -26,7 +26,10 @@ export default function ServiceGrid() {
       {/* Detail View */}
       <AnimatePresence mode="wait">
         {selectedService && (
-          <ServiceDetails selectedService={selectedService} setSelectedService={setSelectedService} />
+          <ServiceDetails
+            selectedService={selectedService}
+            setSelectedService={setSelectedService}
+          />
         )}
       </AnimatePresence>
 
@@ -34,9 +37,9 @@ export default function ServiceGrid() {
       <motion.section
         layout
         className={`grid gap-2 sm:gap-3 md:gap-4 transition-all duration-500 w-full max-w-2xl ${
-          selectedService 
-            ? 'grid-cols-2 sm:grid-cols-4 md:grid-cols-6 grid-rows-2 sm:grid-rows-auto' 
-            : 'grid-cols-2 sm:grid-cols-3 lg:grid-cols-3 grid-rows-3 sm:grid-rows-2'
+          selectedService
+            ? "grid-cols-2 sm:grid-cols-4 md:grid-cols-6 grid-rows-2 sm:grid-rows-auto"
+            : "grid-cols-2 sm:grid-cols-3 lg:grid-cols-3 grid-rows-3 sm:grid-rows-2"
         }`}
       >
         {filteredServices.map((service, index) => (
@@ -45,14 +48,14 @@ export default function ServiceGrid() {
             layout
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
-            transition={{ 
-              duration: 0.3, 
+            transition={{
+              duration: 0.3,
               delay: index * 0.05,
-              layout: { duration: 0.5, ease: "easeInOut" }
+              layout: { duration: 0.5, ease: "easeInOut" },
             }}
             whileHover={{ scale: 1.05, y: -5 }}
             whileTap={{ scale: 0.95 }}
-            className='flex flex-col items-center w-full max-w-[145px] mx-auto text-center cursor-pointer'
+            className="flex flex-col items-center w-full max-w-[145px] mx-auto text-center cursor-pointer"
             onClick={() => setSelectedService(service)}
           >
             <motion.div
@@ -70,5 +73,5 @@ export default function ServiceGrid() {
         ))}
       </motion.section>
     </div>
-  )
+  );
 }
