@@ -5,8 +5,8 @@ import { Analytics } from "@vercel/analytics/next";
 import "styles/globals.css";
 
 export const metadata: Metadata = {
-  title: "Next JS SaaS Starter Template",
-  description: "Next JS SaaS Starter Template",
+  title: "JVD",
+  description: "Software and web development solutions for small businesses.",
 };
 
 export default function RootLayout({
@@ -25,7 +25,6 @@ export default function RootLayout({
           crossOrigin="anonymous"
         />
         <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
-        <title>JVD</title>
       </head>
       <body className="bg-white">
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
