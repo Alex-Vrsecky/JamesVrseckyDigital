@@ -8,12 +8,12 @@ export default function ServiceDetails({selectedService, setSelectedService}: {s
       initial={{ opacity: 0, y: -20 }}
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: -20 }}
-      className="w-full max-w-4xl  mb-6 sm:mb-8 p-4 sm:p-6 md:p-8 bg-white rounded-2xl shadow-xl border border-gray-100"
+      className="w-full max-w-4xl mx-auto mb-6 sm:mb-8 p-4 sm:p-6 md:p-8 bg-white rounded-2xl shadow-md border"
     >
       {/* Header */}
       <div className="flex items-start justify-between mb-4 sm:mb-6 gap-3">
         <div className="flex items-center gap-3 sm:gap-4 flex-1 min-w-0">
-          <div 
+          <div
             className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 flex-shrink-0 flex items-center justify-center rounded-xl [&>svg]:text-2xl sm:[&>svg]:text-3xl md:[&>svg]:text-4xl"
             style={{ backgroundColor: selectedService.colour }}
           >
@@ -51,7 +51,9 @@ export default function ServiceDetails({selectedService, setSelectedService}: {s
               transition={{ delay: index * 0.1 }}
               className="flex items-start gap-2 sm:gap-3 text-sm sm:text-base text-gray-700"
             >
-              <span className="text-green-500 text-lg sm:text-xl flex-shrink-0 mt-0.5">✓</span>
+              <span className="text-green-500 text-lg sm:text-xl flex-shrink-0 mt-0.5">
+                ✓
+              </span>
               <span className="flex-1">{feature}</span>
             </motion.li>
           ))}
@@ -65,5 +67,5 @@ export default function ServiceDetails({selectedService, setSelectedService}: {s
         </p>
       </div>
     </motion.div>
-  )
+  );
 }

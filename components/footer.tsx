@@ -6,7 +6,7 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <section className="flex flex-col lg:flex-row p-4 sm:p-6 md:p-8 lg:p-10 items-center justify-start w-full mt-auto gap-6 lg:gap-0 pt-10">
+    <section className="flex flex-col lg:flex-row p-4 sm:p-6 md:p-8 lg:p-10 items-center justify-start w-full mt-auto gap-6 lg:gap-0 pt-10 max-w-5xl">
       {/* Links Section */}
       <div className="flex flex-col gap-3 sm:gap-4 lg:gap-5 w-full lg:w-auto md:items-start items-center">
         <LinkButton
@@ -62,7 +62,7 @@ export default function Footer() {
           Web: www.jamesvrseckydigital.com.au
           <br />
           <br />
-          All prices in AUD | Prices subject to change | ABN: XX XXX XXX XXX
+          All prices in AUD | Prices subject to change | ABN: 93 245 401 158
         </p>
       </div>
     </section>
