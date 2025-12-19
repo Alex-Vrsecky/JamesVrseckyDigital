@@ -65,7 +65,6 @@ export default function WhyUsPage() {
   return (
     <div className="max-w-6xl mx-auto p-5 sm:p-20">
       {/* Header */}
-      <Header />
       <h1 className="text-4xl font-bold mb-12 text-center text-black">
         Why Choose Next.js Over Wix for Your Website?
       </h1>

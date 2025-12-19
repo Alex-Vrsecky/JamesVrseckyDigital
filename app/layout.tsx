@@ -3,6 +3,8 @@ import { ThemeProvider } from "next-themes";
 import { Analytics } from "@vercel/analytics/next";
 
 import "styles/globals.css";
+import Header from "components/header";
+import Footer from "components/footer";
 
 export const metadata: Metadata = {
   title: "JVD",
@@ -29,9 +31,11 @@ export default function RootLayout({
         />
         <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
       </head>
-      <body className="bg-white">
+      <body className="bg-white flex flex-col min-h-screen items-center p-5 sm:p-20">
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
+          <Header />
           {children}
+          <Footer />
           <Analytics />
         </ThemeProvider>
       </body>

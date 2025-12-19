@@ -18,7 +18,7 @@ export default function ServiceGrid() {
   const [selectedService, setSelectedService] = useState<Service | null>(null);
 
   const filteredServices = services.filter(
-    service => service.name !== "Why us?" && service.name !== "Quotation"
+    (service) => service.name !== "Why us?" && service.name !== "Contact"
   );
 
   return (

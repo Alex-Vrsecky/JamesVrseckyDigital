@@ -23,12 +23,11 @@ export default function Footer() {
       <div className="flex gap-4 sm:gap-5 lg:mx-20 justify-center">
         {services
           .filter(
-            (service) =>
-              service.name == "Why us?" || service.name == "Quotation"
+            (service) => service.name == "Why us?" || service.name == "Contact"
           )
           .map((service) => (
             <Link
-              href={"/whyUs"}
+              href={service.name === "Why us?" ? "/whyUs" : "/contact"}
               key={service.name}
               className="flex flex-col items-center max-w-[120px] sm:max-w-[145px] text-center hover:scale-105 transition-all duration-300"
             >
