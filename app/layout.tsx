@@ -7,6 +7,9 @@ import "styles/globals.css";
 export const metadata: Metadata = {
   title: "JVD",
   description: "Software and web development solutions for small businesses.",
+  verification: {
+    google: "JYjCjM0apONBhHKwGO_f8hRqZBjUPB5tyTS8rOxVU20",
+  },
 };
 
 export default function RootLayout({
